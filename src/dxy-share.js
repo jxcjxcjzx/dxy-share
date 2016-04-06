@@ -199,7 +199,7 @@ if (typeof require !== 'undefined') {
 
                             temp = '<div class="w_center">' +
                                 '<div id="w_qr" class="w_qr" width="90" height="90"></div>' +
-                                '<p class="w_cont">打开微信，点击底部的“发现”，使用“扫一扫”即可将网页分享到朋友圈。</p>' +
+                                '<p class="w_cont">使用微信“扫一扫”分享到朋友圈。</p>' +
                                 '</div>' +
                                 '<div id="triangle" class="w_bottom"></div>' +
                                 '<div id="w_close" class="w_close"></div>';
