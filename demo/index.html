@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>DXY Share Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/dxy-share.min.css">
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -42,9 +43,6 @@
         p {
             font-size: 18px;
         }
-        .share {
-            height: 200px;
-        }
     </style>
 </head>
 <body>
@@ -52,7 +50,7 @@
     <div class="container">
         <h1>dxy-share</h1>
         <h2>丁香园前端分享组件</h2>
-        <p>Available on <a href="https://github.com/DIYgod/APlayer" target="_blank">GitHub</a>. Licensed MIT.</p>
+        <p>Available on <a href="https://github.com/dxy-biz-developer/dxy-share" target="_blank">GitHub</a>. Licensed MIT.</p>
         <hr>
         <h3>style1</h3>
         <div id="style1" class="share"></div>
@@ -69,33 +67,34 @@
         <h3>style m1</h3>
         <div id="stylem1" class="share"></div>
     </div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="../dist/dxy-share.min.js"></script>
     <script>
         var i;
         for (i = 1; i <= 4; i++) {
             (new dxy_share()).show({
                 id:'style' + i,
-                lst:['sina','tt','qzone','douban','renren','weixin'],
+                lst:['sina','tt','qzone','douban','renren','weixin', 'idxy'],
                 style: i,
                 addTo:'（分享自 @丁香园）'
             });
         }
         (new dxy_share()).show({
             id:'style' + 5,
-            lst:['sina','tt','qzone','douban','renren','weixin'],
+            lst:['sina','tt','qzone','douban','renren','weixin', 'idxy'],
             style: 5,
             top: '100',
             addTo:'（分享自 @丁香园）'
         });
         (new dxy_share()).show({
             id:'style6',
-            lst:['sina','tt','qzone','douban','renren','weixin'],
+            lst:['sina','tt','qzone','douban','renren','weixin', 'idxy'],
             style: 6,
             addTo:'（分享自 @丁香园）'
         });
         (new dxy_share()).show({
             id:'stylem1',
-            lst:['sina','tt','qzone','douban','renren','weixin'],
+            lst:['sina','tt','qzone','douban','renren','weixin', 'idxy'],
             style: 'm1',
             addTo:'（分享自 @丁香园）'
         });
