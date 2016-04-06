@@ -1,5 +1,9 @@
+var jQuery;
 if (typeof require !== 'undefined') {
-    var jQuery = require('jquery');
+    jQuery = require('jquery');
+}
+else {
+    jQuery = $;  // for IE8
 }
 
 (function ($) {

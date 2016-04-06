@@ -67,34 +67,35 @@
         <h3>style m1</h3>
         <div id="stylem1" class="share"></div>
     </div>
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../dist/dxy-share.min.js"></script>
     <script>
         var i;
         for (i = 1; i <= 4; i++) {
             (new dxy_share()).show({
                 id:'style' + i,
-                lst:['tt','qzone','douban','renren','weixin', 'sina', 'idxy'],
+                lst:['tt','qzone','douban','weixin', 'sina', 'idxy'],
                 style: i,
                 addTo:'（分享自 @丁香园）'
             });
         }
         (new dxy_share()).show({
             id:'style' + 5,
-            lst:['tt','qzone','douban','renren','weixin', 'sina', 'idxy'],
+            lst:['tt','qzone','douban','weixin', 'sina', 'idxy'],
             style: 5,
             top: '100',
             addTo:'（分享自 @丁香园）'
         });
         (new dxy_share()).show({
             id:'style6',
-            lst:['tt','qzone','douban','renren','weixin', 'sina', 'idxy'],
+            lst:['tt','qzone','douban','weixin', 'sina', 'idxy'],
             style: 6,
-            addTo:'（分享自 @丁香园）'
+            addTo:'（分享自 @丁香园）',
+            share_txt: 'test'
         });
         (new dxy_share()).show({
             id:'stylem1',
-            lst:['tt','qzone','douban','renren','weixin', 'sina', 'idxy'],
+            lst:['tt','qzone','douban','weixin', 'sina', 'idxy'],
             style: 'm1',
             addTo:'（分享自 @丁香园）'
         });
