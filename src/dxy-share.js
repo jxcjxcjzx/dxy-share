@@ -95,7 +95,7 @@ if (typeof require !== 'undefined') {
                 case 3:
                     if (arr.length > 0) {
                         for (var i = 0; i < arr.length; i++) {
-                            share_lst_html += "<a href='javascript:void(0);' name='" + arr[i] + "' class='plg_share_el_nav1_ico plg_ico_" + arr[i] + "' title='" + sName_obj[arr[i]] + "'>&nbsp;</a>";
+                            share_lst_html += "<div class='plg_share_el_nav1_ico_wrap'><a href='javascript:void(0);' name='" + arr[i] + "' class='plg_share_el_nav1_ico plg_ico_" + arr[i] + "' title='" + sName_obj[arr[i]] + "'>&nbsp;</a></div>";
                         }
                     }
 
@@ -188,6 +188,7 @@ if (typeof require !== 'undefined') {
                     } else if (this.name == 'weixin') {
                         var weixin_node = this.parentNode,
                             weixin_api = sApi[this.name] + 'url=' + _url + '&size=5&margin=1&format=png';
+                        console.log(weixin_node);
 
                         var weixin = $('.weixin', weixin_node)[0];
 
@@ -212,6 +213,7 @@ if (typeof require !== 'undefined') {
                             weixin_node.appendChild(weixin);
                             triangle = $('.w_bottom', weixin_node)[0];
 
+                            console.log(e);
                             //微信box定位调整
                             if (style == 1) {
                                 weixin.style.top = '-83px';
@@ -222,8 +224,7 @@ if (typeof require !== 'undefined') {
                                 weixin.style.left = '120px';
                                 triangle.className = 'w_left';
                             } else if (style == 3) {
-                                weixin.style.top = '-122px';
-                                weixin.style.left = '108px';
+                                weixin.style.left = '-12px';
                             } else if (style == 5) {
                                 weixin.style.top = '-83px';
                                 weixin.style.left = '-283px';

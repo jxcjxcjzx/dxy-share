@@ -98,6 +98,7 @@
     position: absolute;
     top: -121px;
     left: -5px;
+    z-index: 3;
 }
 
 .w_left {
@@ -216,6 +217,11 @@
     top: 0px;
     display: none;
     background: #fff;
+}
+
+.plg_share_el_nav1_ico_wrap {
+    float: left;
+    position: relative;
 }
 
 .plg_share_style1 .plg_share_el_nav1_ico {
