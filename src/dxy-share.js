@@ -192,7 +192,6 @@ else {
                     } else if (this.name == 'weixin') {
                         var weixin_node = this.parentNode,
                             weixin_api = sApi[this.name] + 'url=' + _url + '&size=5&margin=1&format=png';
-                        console.log(weixin_node);
 
                         var weixin = $('.weixin', weixin_node)[0];
 
@@ -217,7 +216,6 @@ else {
                             weixin_node.appendChild(weixin);
                             triangle = $('.w_bottom', weixin_node)[0];
 
-                            console.log(e);
                             //微信box定位调整
                             if (style == 1) {
                                 weixin.style.top = '-83px';
