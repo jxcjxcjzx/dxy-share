@@ -5,6 +5,10 @@
 
 丁香园前端分享组件
 
+## Demo
+
+[DXY Share Demo](http://dxy-biz-developer.github.io/dxy-share/demo)
+
 ## 使用方法
 
 ### 1. 使用 npm 安装
