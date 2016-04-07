@@ -1,5 +1,8 @@
 # dxy-share
 
+[![npm](https://img.shields.io/npm/v/dxy-share.svg?style=flat-square)](https://www.npmjs.com/package/dxy-share)
+[![npm](https://img.shields.io/npm/dt/dxy-share.svg?style=flat-square)](https://www.npmjs.com/package/dxy-share)
+
 丁香园前端分享组件
 
 ## 使用方法
