@@ -169,6 +169,60 @@ else {
 
             }
 
+            // 分享打点
+            function getDate() {
+                function pad(number) {
+                    return number < 10 ? ('0' + number) : number;
+                }
+
+                var d = new Date();
+
+                return d.getFullYear() +
+                    '-' + pad(d.getMonth() + 1) +
+                    '-' + pad(d.getDate()) +
+                    ' ' + pad(d.getHours()) +
+                    ':' + pad(d.getMinutes()) +
+                    ':' + pad(d.getSeconds()) +
+                    ' ' + pad(d.getMilliseconds());
+            }
+
+            function getContentId () {
+                var match = $('body').attr('class').match(/page-node-(\d+)/);
+                return match ? match[1] : -1;
+            }
+
+            function log(info) {
+                var defaults = {
+                    event_datetime: getDate(),
+                    event_type: 'click',
+                    event_comment: document.title,
+                    event_url: window.location.href,
+                    content_id: getContentId()
+                };
+                var data = $.extend({}, defaults, info);
+
+                TA.log(data);
+            }
+
+            if (op['da']) {
+                var eventIds = {
+                    sina: 'cssw', // click_sns_sina_weibo
+                    weixin: 'csw', // click_sns_wechat
+                    tt: 'cstw', // click_sns_tencent_weibo
+                    qzone: 'csqs', // click_sns_qq_space
+                    idxy: 'csdb' // click_sns_dxy_blog
+                };
+                $('#' + id + ' a[name]').on('click', function () {
+                    var $this = $(this);
+                    var name = $this.attr('name');
+                    var info = {
+                        event_id: eventIds[name]
+                    };
+
+                    log(info);
+                });
+            }
+
 
             //tagName='a' event
             var j_dxyshare_a_arr = document.getElementById('j_dxyshare_lst_' + id).getElementsByTagName('a');

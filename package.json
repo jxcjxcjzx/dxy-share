@@ -1,6 +1,6 @@
 {
   "name": "dxy-share",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "丁香园前端分享组件",
   "main": "dist/dxy-share.min.js",
   "scripts": {
