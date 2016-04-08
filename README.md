@@ -79,3 +79,5 @@ share.show(options);
 + `addTo`: String, 追加在自动生成内容(网页title) 后的文本
 
 + `share_txt`: String, 自定义分享的文本内容
+
++ `da`: Boolean, 是否启用打点, 默认为 false
