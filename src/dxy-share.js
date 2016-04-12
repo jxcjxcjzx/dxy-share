@@ -36,19 +36,15 @@ else {
             renren: '人人网',
             qzone: 'QQ空间',
             idxy: '丁香客',
-            kaixin: '开心网',
-            weixin: '微信',
-            favorite: '收藏夹'
+            weixin: '微信'
         };
         var sApi = {
             sina: 'http://v.t.sina.com.cn/share/share.php?appkey=1611508056&content=' + (document.charset || "gbk") + '&',
             tt: 'http://v.t.qq.com/share/share.php?',
             douban: 'http://www.douban.com/share/service/?',
-            // douban: 'http://www.douban.com/recommend/?',
-            renren: 'http://share.renren.com/share/buttonshare?',
+            renren: 'http://widget.renren.com/dialog/share?',
             qzone: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',
             idxy: '',
-            kaixin: 'http://www.kaixin001.com/repaste/share.php?',
             weixin: 'http://api.dxy.cn/qr-code/?'
         };
 
@@ -206,6 +202,7 @@ else {
 
             if (op['da']) {
                 var eventIds = {
+                    // Todo
                     sina: 'cssw', // click_sns_sina_weibo
                     weixin: 'csw', // click_sns_wechat
                     tt: 'cstw', // click_sns_tencent_weibo
@@ -233,17 +230,7 @@ else {
                     var _url = shareUrl || window.location.href;
                     _url = encodeURI(_url);
 
-                    if (this.name == 'favorite') {
-
-                        if (document.all) {
-                            window.external.addFavorite(_url, document.title);
-                        } else if (window.sidebar && window.sidebar.addPanel) {
-                            window.sidebar.addPanel(document.title, _url, '');
-                        } else {
-                            alert('对不起，暂时不支持您的浏览器');
-                        }
-
-                    } else if (this.name == 'weixin') {
+                    if (this.name == 'weixin') {
                         var weixin_node = this.parentNode,
                             weixin_api = sApi[this.name] + 'url=' + _url + '&size=5&margin=1&format=png';
 
@@ -316,6 +303,10 @@ else {
                         if (this.name === 'douban') {
                             api = sApi[this.name] + 'name=' + encodeURIComponent(share_txt) + '&href=' + encodeURIComponent(_url) + '&text=%20';
                             //console.log(api);
+                        } else if (this.name === 'renren') {
+                            api = sApi[this.name] + 'title=' + encodeURIComponent(share_txt) + '&resourceUrl=' + encodeURIComponent(_url) + '&srcUrl=' + encodeURIComponent(_url) + '&summary=%20';
+                        } else if (this.name === 'qzone') {
+                            api = sApi[this.name] + 'url=' + encodeURIComponent(_url) + '&title=' + encodeURIComponent(share_txt) + '&summary=%20';
                         } else {
                             api = sApi[this.name] + 'title=' + encodeURIComponent(share_txt) + '&url=' + encodeURIComponent(_url) + '&summary=%20';
                         }
