@@ -55,7 +55,7 @@ CSS:
 var share = new dxy_share();    // 此时 dxy_share 为全局变量
 share.show({
     id: 'share1',
-    lst: ['tt', 'qzone', 'douban', 'weixin', 'sina', 'idxy'],
+    lst: ['sina', 'weixin', 'qzone', 'douban', 'idxy', 'renren'],
     style: 1,
     addTo:'（分享自 @丁香园）'
 });
@@ -72,12 +72,12 @@ share.show(options);
 
 + `id`: String, 放置分享组件的容器id
 
-+ `lst`: Array, 需要显示的分享项, 现有：`['tt','qzone','douban','weixin', 'sina', 'idxy','renren']`
++ `lst`: Array, 需要显示的分享项, 现有：`['sina', 'weixin', 'qzone', 'douban', 'idxy', 'renren']`
 
 + `style`: 组件的主题，现有: `1, 2, 3, 4, 5, 6, 7, 'm1'`
 
 + `addTo`: String, 追加在自动生成内容(网页title) 后的文本
 
-+ `share_txt`: String, 自定义分享的文本内容
++ `share_txt`: String, 自定义分享的文本内容, 默认为页面title
 
 + `da`: Boolean, 是否启用打点, 默认为 false

@@ -304,7 +304,7 @@ else {
                             api = sApi[this.name] + 'name=' + encodeURIComponent(share_txt) + '&href=' + encodeURIComponent(_url) + '&text=%20';
                             //console.log(api);
                         } else if (this.name === 'renren') {
-                            api = sApi[this.name] + 'title=' + encodeURIComponent(share_txt) + '&resourceUrl=' + encodeURIComponent(_url) + '&srcUrl=' + encodeURIComponent(_url) + '&summary=%20';
+                            api = sApi[this.name] + 'title=' + encodeURIComponent(share_txt) + '&resourceUrl=' + encodeURIComponent(_url) + '&srcUrl=' + encodeURIComponent(_url) + '&description=%20';
                         } else if (this.name === 'qzone') {
                             api = sApi[this.name] + 'url=' + encodeURIComponent(_url) + '&title=' + encodeURIComponent(share_txt) + '&summary=%20';
                         } else {
