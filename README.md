@@ -24,7 +24,7 @@ JS:
 ```js
 var dxy_share = require('dxy-share');
 var share = new dxy_share();
-dshare.show({
+share.show({
     id: 'share1',
     lst: ['tt', 'qzone', 'douban', 'weixin', 'sina', 'idxy'],
     style: 1,
