@@ -26,9 +26,10 @@ var dxy_share = require('dxy-share');
 var share = new dxy_share();
 share.show({
     id: 'share1',
-    lst: ['tt', 'qzone', 'douban', 'weixin', 'sina', 'idxy'],
+    lst: ['sina', 'weixin', 'qzone', 'douban', 'idxy', 'renren'],
     style: 1,
-    addTo:'（分享自 @丁香园）'
+    addTo:'（分享自 @丁香园）',
+    da: true
 });
 ```
 
@@ -57,7 +58,8 @@ share.show({
     id: 'share1',
     lst: ['sina', 'weixin', 'qzone', 'douban', 'idxy', 'renren'],
     style: 1,
-    addTo:'（分享自 @丁香园）'
+    addTo:'（分享自 @丁香园）',
+    da: true
 });
 ```
 
