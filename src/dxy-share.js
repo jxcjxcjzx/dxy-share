@@ -207,8 +207,8 @@ else {
                     tt: 'cstw', // click_sns_tencent_weibo
                     qzone: 'csqs', // click_sns_qq_space
                     idxy: 'csdb', // click_sns_dxy_blog
-                    douban: 'csdf', // click_sns_douban_forum
-                    renren: 'csrc'  // click_sns_renren_space
+                    douban: 'csdouban', // click_sns_douban_forum
+                    renren: 'csrs'  // click_sns_renren_space
                 };
                 $('#' + id + ' a[name]').on('click', function () {
                     var $this = $(this);
